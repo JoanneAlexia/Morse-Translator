@@ -1,0 +1,101 @@
+body {
+  font-family: "Source Code Pro", monospace;
+  background-color: rgb(96, 108, 56);
+  font-size: 18px;
+}
+
+h1 {
+  font-family: "Rubik Distressed", cursive;
+  color: rgb(40, 54, 24);
+  margin: 20px 0;
+}
+
+main {
+  margin: 10vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input,
+.output {
+  display: flex;
+  flex-direction: column;
+  width: 49.5%;
+}
+.input__language,
+.output__language {
+  padding: 10px;
+  border: solid rgb(40, 54, 24) 2px;
+  color: rgb(40, 54, 24);
+  font-size: 18px;
+  font-weight: bold;
+}
+.input__language--morse,
+.output__language--morse {
+  margin-right: 5px;
+}
+.input__language--selected,
+.output__language--selected {
+  background-color: rgb(188, 108, 37);
+  border-color: rgb(254, 250, 224);
+  color: rgb(254, 250, 224);
+}
+
+.languages {
+  display: flex;
+}
+
+.input__text,
+.output__text-wrapper {
+  background-color: rgb(254, 250, 224);
+  height: 30vh;
+  padding: 10px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 18px;
+  border-style: none;
+  border-radius: 8px;
+}
+
+.input__text:focus {
+  outline: none !important;
+  border: 1px solid rgb(221, 161, 94);
+  box-shadow: 0 0 10px rgb(221, 161, 94);
+}
+
+.output__text-wrapper {
+  display: flex;
+  align-items: center;
+}
+.output__text {
+  margin: 0;
+}
+
+.submit-btn {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(40, 54, 24);
+  color: rgb(254, 250, 224);
+  font-size: 18px;
+  margin: 10px 0;
+  font-family: "Source Code Pro", monospace;
+}
+
+.error-message {
+  border: 2px solid rgb(254, 250, 224);
+  background-color: rgb(188, 108, 37);
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+.error-message__text, .error-message__header {
+  text-align: center;
+  color: rgb(254, 250, 224);
+}
+.error-message--hidden {
+  display: none;
+}
