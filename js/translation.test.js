@@ -58,6 +58,11 @@ describe("Testing function that converts morse code word to english word", () =>
     }).toThrow(new Error(errorMessages.tooManyArguments));
   });
 });
+it("Check that error message is thrown if morse characters are not in translation key", () => {
+  expect(() => {
+    transMorseWordToEng(".....");
+  }).toThrow(new Error(errorMessages.notMorseCodeChar));
+});
 
 describe("Testing function that converts morse code text to english text", () => {
   it("Check that morse code text is correctly translated into an english", () => {

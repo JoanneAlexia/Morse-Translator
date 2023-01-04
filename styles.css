@@ -27,20 +27,16 @@ main {
   flex-direction: column;
   width: 49.5%;
 }
-.input__language,
-.output__language {
+
+.language {
   padding: 10px;
   border: solid rgb(40, 54, 24) 2px;
   color: rgb(40, 54, 24);
   font-size: 18px;
   font-weight: bold;
+  margin-left: 5px;
 }
-.input__language--morse,
-.output__language--morse {
-  margin-right: 5px;
-}
-.input__language--selected,
-.output__language--selected {
+.language--selected {
   background-color: rgb(188, 108, 37);
   border-color: rgb(254, 250, 224);
   color: rgb(254, 250, 224);

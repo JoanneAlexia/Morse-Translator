@@ -1,4 +1,8 @@
-import { translationKey, errorMessages } from "./variables.js";
+import {
+  translationKey,
+  morseCodeSymbols,
+  errorMessages,
+} from "./variables.js";
 import { checkNoArgument, checkTooManyArguments } from "./checks.js";
 
 export function transEngWordToMorse(word, ...extraArg) {
@@ -34,6 +38,9 @@ export function transMorseWordToEng(word, ...extraArg) {
 
   const morseWordChars = word.split(" ");
   return morseWordChars.reduce((englishWord, morseChar) => {
+    if (!Object.values(translationKey).includes(morseChar)) {
+      throw new Error(errorMessages.notMorseCodeChar);
+    }
     return (englishWord += Object.keys(translationKey).find(
       (letter) => translationKey[letter] === morseChar
     ));
@@ -58,7 +65,6 @@ export function isMorseCode(text, ...extraArg) {
   checkNoArgument(text);
   checkTooManyArguments(extraArg);
 
-  const morseCodeSymbols = [".", "-", " ", "/"];
   if ([...text].every((char) => morseCodeSymbols.includes(char))) return true;
   else {
     return false;

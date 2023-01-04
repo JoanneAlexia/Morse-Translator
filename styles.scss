@@ -28,20 +28,19 @@ main {
   display: flex;
   flex-direction: column;
   width: 49.5%;
-  &__language {
-    padding: 10px;
-    border: solid $kombu-green 2px;
-    color: $kombu-green;
-    font-size: 18px;
-    font-weight: bold;
-    &--morse {
-      margin-right: 5px;
-    }
-    &--selected {
-      background-color: $liver-dogs;
-      border-color: $cornsilk;
-      color: $cornsilk;
-    }
+}
+
+.language {
+  padding: 10px;
+  border: solid $kombu-green 2px;
+  color: $kombu-green;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 5px;
+  &--selected {
+    background-color: $liver-dogs;
+    border-color: $cornsilk;
+    color: $cornsilk;
   }
 }
 

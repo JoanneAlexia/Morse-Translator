@@ -1,61 +1,28 @@
 # Morse Code Translator
 
-## Outline
+## Description
 
-This task will require you to create a web page Morse Code translator.
-The focus of this project will be putting your code into modules and creating unit tests
-The User Interface will have to look good but should remain simple (additional features, ie. sounds, lights, etc, should only be added once the MVP has been completed.)
+This is a web page, Morse code translator. A user can enter either Morse code or English text into the input text area on the left and a translation will appear in the output text area on the right once, the "Encode/Decode" button has been selected.
+The program can detect whether English or Morse code has been entered by the user and will highlight the input language detected. The output language will also be highlighted.
 
-## MVP
+![Screenshot](screenshot.png)
 
--   Create a user interface that allows the user to either input some English text or some Morse Code
--   Create JS functions that would allow the user to:
+Relevent error messages will appear if:
 
-    -   translate their English text into Morse Code
-    -   Morse Code into English text
+- No input has been entered.
+- If non alphabetic or morse code symbols are entered.
+- If the morse code characters entered cannot be translated into an alaphbetic letter.
 
--   Make sure to handle spaces properly (ie. there is 1 space between English words, but one space between Morse Code characters)
+## Specifications
 
--   Bonus: Handle other characters as well
--   Bonus: Detect if a piece of text is english or morse and translate accordingly
+Creating a morse code translator was one of the projects given whilst completing the \_nology tech consultancy program. The webpage needed to be built using vanilla JavaScript and SASS. There was also a requirement that unit testing be performed using JEST. The timeframe for completing the project was one week.
 
--   Split your code between data, logic functions and dom functions
--   Develop unit tests for all of your logic functions
--   Explore and discover edge cases in your code to further develop your tests
+## Personal goals:
 
-## Useful Resources:
+### Modular Program Structure
 
--   [Iterate Object in JavaScript](https://www.javascripttutorial.net/object/iterate-object-in-javascript/)
--   [Looping through objects keys and values in Javascript?](https://flexiple.com/loop-through-object-javascript/)
+I used this project to practise more optimally structuring my programs. I made an effort to seperate out different logic into seperate files and to create smaller functions with a singular purpose. I also made more of an attempt to use variables where possible rather than hardcoding, for example, using an variable to hold error messages.
 
-```js
-// A to Z in Morse Code
-{
-   "A": ".-",
-   "B": "-...",
-   "C": "-.-.",
-   "D": "-..",
-   "E": ".",
-   "F": "..-.",
-   "G": "--.",
-   "H": "....",
-   "I": "..",
-   "J": ".---",
-   "K": "-.-",
-   "L": ".-..",
-   "M": "--",
-   "N": "-.",
-   "O": "---",
-   "P": ".--.",
-   "Q": "--.-",
-   "R": ".-.",
-   "S": "...",
-   "T": "-",
-   "U": "..-",
-   "W": ".--",
-   "X": "-..-",
-   "Y": "-.--",
-   "Z": "--.."
-}
+### Testing driven development
 
-```
+With the functions in the translation file I did make an attempt at test driven development, creating the tests prior to writing the functions.

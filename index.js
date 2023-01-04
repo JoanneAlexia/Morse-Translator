@@ -18,13 +18,10 @@ submitBtn.addEventListener("click", (event) => {
     userInput = document.querySelector(".input__text").value;
 
     //Remove selected class on language options for input and output
-    removeClass(".input__language--morse", "input__language--selected");
-
-    removeClass(".input__language--english", "input__language--selected");
-
-    removeClass(".output__language--morse", "output__language--selected");
-
-    removeClass(".output__language--english", "output__language--selected");
+    const languageOptions = document.querySelectorAll(".language");
+    languageOptions.forEach((element) => {
+      element.classList.remove("language--selected");
+    });
 
     addClass(".error-message", "error-message--hidden");
 
@@ -34,10 +31,10 @@ submitBtn.addEventListener("click", (event) => {
       /////////////////////
 
       //If morse code highlight input text morse code
-      addClass(".input__language--morse", "input__language--selected");
+      addClass(".input__language--morse", "language--selected");
 
       //Highlight output text english
-      addClass(".output__language--english", "output__language--selected");
+      addClass(".output__language--english", "language--selected");
 
       //Translate code and output result
       const outputText = transMorseTextToEng(userInput);
@@ -47,10 +44,10 @@ submitBtn.addEventListener("click", (event) => {
       /////////////////////
 
       //If morse code highlight input text morse code
-      addClass(".input__language--english", "input__language--selected");
+      addClass(".input__language--english", "language--selected");
 
       //Highlight output text english
-      addClass(".output__language--morse", "output__language--selected");
+      addClass(".output__language--morse", "language--selected");
 
       //Translate code and output result
       const outputText = transEngTextToMorse(userInput);
