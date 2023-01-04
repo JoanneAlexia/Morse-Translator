@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Rubik+Distressed&family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./index.js" defer></script>
+    <title>Morse Translator</title>
+  </head>
+  <body>
+    <main>
+      <h1>Morse Code Translator</h1>
+      <div class="wrapper">
+        <!--Input-->
+        <div class="input">
+          <div class="languages">
+            <p class="language input__language--morse">Morse Code</p>
+            <p class="language input__language--english">English</p>
+          </div>
+          <input
+            id="input"
+            type="textarea"
+            class="input__text"
+            placeholder="Input text here..."
+          />
+        </div>
+        <!--Output-->
+        <div class="output">
+          <div class="languages">
+            <p class="language output__language--morse">Morse Code</p>
+            <p class="language output__language--english">English</p>
+          </div>
+          <div class="output__text-wrapper">
+            <p class="output__text"></p>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="submit-btn">Encode/Decode</button>
+      <div class="error-message error-message--hidden">
+        <h3 class="error-message__header">ERROR</h3>
+        <p class="error-message__text"></p>
+      </div>
+    </main>
+  </body>
+</html>

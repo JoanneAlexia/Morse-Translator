@@ -1,0 +1,103 @@
+@import "./css/modules-partials/_palette";
+
+body {
+  font-family: "Source Code Pro", monospace;
+  background-color: $dark-olive-green;
+  font-size: 18px;
+}
+
+h1 {
+  font-family: "Rubik Distressed", cursive;
+  color: $kombu-green;
+  margin: 20px 0;
+}
+
+main {
+  margin: 10vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input,
+.output {
+  display: flex;
+  flex-direction: column;
+  width: 49.5%;
+}
+
+.language {
+  padding: 10px;
+  border: solid $kombu-green 2px;
+  color: $kombu-green;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 5px;
+  &--selected {
+    background-color: $liver-dogs;
+    border-color: $cornsilk;
+    color: $cornsilk;
+  }
+}
+
+.languages {
+  display: flex;
+}
+
+.input__text,
+.output__text-wrapper {
+  background-color: $cornsilk;
+  height: 30vh;
+  padding: 10px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 18px;
+  border-style: none;
+  border-radius: 8px;
+}
+
+.input__text:focus {
+  outline: none !important;
+  border: 1px solid $earth-yellow;
+  box-shadow: 0 0 10px $earth-yellow;
+}
+
+.output {
+  &__text-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    margin: 0;
+  }
+}
+
+.submit-btn {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: $kombu-green;
+  color: $cornsilk;
+  font-size: 18px;
+  margin: 10px 0;
+  font-family: "Source Code Pro", monospace;
+}
+
+.error-message {
+  border: 2px solid $cornsilk;
+  background-color: $liver-dogs;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  &__text,
+  &__header {
+    text-align: center;
+    color: $cornsilk;
+  }
+  &--hidden {
+    display: none;
+  }
+}
